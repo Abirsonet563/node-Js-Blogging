@@ -1,10 +1,17 @@
 const fs = require('fs');
 
-//read file
-fs.readFile('./docs/blog1.txt', (err, data) => {
+//directories
+if (! fs.existsSync('./assets')){
+fs.mkdir('./assets', (err) => {
     if(err){
         console.log(err);
-    }else{
-    console.log(data.toString());
     }
-});
+    console.log("folder Created");
+})} else{
+    fs.rmdir('./assets', (err) => {
+        if(err) {
+            console.log(err)
+        }
+        console.log('Folder Deleted')
+    })
+}
