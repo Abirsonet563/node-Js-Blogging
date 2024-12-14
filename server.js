@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 // Install nodemon server to Run the Update the Server -- npm install -g nodemon
 //If I Use Any Any Third Party Project, Always Use -- npm init
@@ -7,6 +8,17 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
 
+  //Geenrate Random Number Using lodash
+  const num = _.random(0, 100);
+  console.log(num);
+
+  //once lodash Function
+  const great = _.once(() => {
+    console.log('Hi')
+  })
+
+  great();
+  great();
   //set Header Content type
   res.setHeader('Content-Type', 'text/html');
 
