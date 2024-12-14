@@ -1,6 +1,9 @@
 const http = require('http');
 const fs = require('fs');
 
+// Install nodemon server to Run the Update the Server -- npm install -g nodemon
+//If I Use Any Any Third Party Project, Always Use -- npm init
+
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
 
