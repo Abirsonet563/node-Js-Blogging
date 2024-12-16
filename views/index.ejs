@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog ninjs</title>
+    <title>Blog ninjs | <%=title%></title>
 </head>
 <body>
+
     <nav>
         <div class="site-title">
+            <% const name = "Abir Hasan"; %>
+            <h1>Welcome, <%= name %>!</h1>
          <a hraf="/">Blog ninja</a>
          <p>A net Ninja Site</p>
         </div>
@@ -19,6 +22,15 @@
     </nav>
     <div class="Blogs Content">
         <h2>All Blogs</h2>
+        <% if(blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+            <h3 class="title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+
+         <% }) %>
+       <% }else {%>
+      <p>There is No Paragraph To Display....</p>
+      <% }%>
     </div>
 </body>
 </html>
