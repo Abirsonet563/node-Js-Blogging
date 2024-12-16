@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog ninjs | <%=title%></title>
-</head>
+    <%- include('./partials/head.ejs')%>
+>
 <body>
-    <nav>
-        <div class="site-title">
-         <a hraf="/">Blog ninja</a>
-         <p>A net Ninja Site</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">about</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
+    <%- include('./partials/nav.ejs')%>
+
 
     <div class="create-blog content">
         <form>
@@ -30,5 +18,7 @@
 
         </form>
     </div>
+    <%- include('./partials/footer.ejs')%>
+
 </body>
 </html>
