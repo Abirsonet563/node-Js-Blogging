@@ -8,6 +8,9 @@ app.set('view engine', 'ejs');
 
 //Listen for Request
 app.listen(3000);
+
+//middleware and Static file
+app.use(express.static('public'));
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
